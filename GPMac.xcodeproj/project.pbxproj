@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		CECA06CE239A82FC0082D0D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECA06CC239A82FC0082D0D6 /* Main.storyboard */; };
 		CECA06DA239A82FC0082D0D6 /* GPMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA06D9239A82FC0082D0D6 /* GPMacTests.swift */; };
 		CECA06E5239A82FC0082D0D6 /* GPMacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA06E4239A82FC0082D0D6 /* GPMacUITests.swift */; };
+		CECA06F4239A9A130082D0D6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CECA06F3239A9A130082D0D6 /* SnapKit */; };
+		CECA06F6239AA8230082D0D6 /* InjectScript.js in Resources */ = {isa = PBXBuildFile; fileRef = CECA06F5239AA8230082D0D6 /* InjectScript.js */; };
+		CECA06F8239B5C350082D0D6 /* CustomWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA06F7239B5C350082D0D6 /* CustomWebView.swift */; };
+		CECA06FA239BA1480082D0D6 /* GPMNowPlayingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA06F9239BA1480082D0D6 /* GPMNowPlayingState.swift */; };
+		CECA06FD239BA45D0082D0D6 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = CECA06FC239BA45D0082D0D6 /* Nuke */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,11 @@
 		CECA06E0239A82FC0082D0D6 /* GPMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECA06E4239A82FC0082D0D6 /* GPMacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPMacUITests.swift; sourceTree = "<group>"; };
 		CECA06E6239A82FC0082D0D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECA06F5239AA8230082D0D6 /* InjectScript.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = InjectScript.js; sourceTree = "<group>"; };
+		CECA06F7239B5C350082D0D6 /* CustomWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWebView.swift; sourceTree = "<group>"; };
+		CECA06F9239BA1480082D0D6 /* GPMNowPlayingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPMNowPlayingState.swift; sourceTree = "<group>"; };
+		CECA06FF239BB2F70082D0D6 /* WKWebViewPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewPrivate.h; sourceTree = "<group>"; };
+		CECA0700239BB3140082D0D6 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECA06F4239A9A130082D0D6 /* SnapKit in Frameworks */,
+				CECA06FD239BA45D0082D0D6 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,8 +108,13 @@
 		CECA06C5239A82F90082D0D6 /* GPMac */ = {
 			isa = PBXGroup;
 			children = (
+				CECA0700239BB3140082D0D6 /* Bridge.h */,
+				CECA06FE239BB2E10082D0D6 /* DarkMagic */,
 				CECA06C6239A82F90082D0D6 /* AppDelegate.swift */,
 				CECA06C8239A82F90082D0D6 /* ViewController.swift */,
+				CECA06F9239BA1480082D0D6 /* GPMNowPlayingState.swift */,
+				CECA06F7239B5C350082D0D6 /* CustomWebView.swift */,
+				CECA06F5239AA8230082D0D6 /* InjectScript.js */,
 				CECA06CA239A82FC0082D0D6 /* Assets.xcassets */,
 				CECA06CC239A82FC0082D0D6 /* Main.storyboard */,
 				CECA06CF239A82FC0082D0D6 /* Info.plist */,
@@ -124,6 +141,14 @@
 			path = GPMacUITests;
 			sourceTree = "<group>";
 		};
+		CECA06FE239BB2E10082D0D6 /* DarkMagic */ = {
+			isa = PBXGroup;
+			children = (
+				CECA06FF239BB2F70082D0D6 /* WKWebViewPrivate.h */,
+			);
+			path = DarkMagic;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +165,10 @@
 			dependencies = (
 			);
 			name = GPMac;
+			packageProductDependencies = (
+				CECA06F3239A9A130082D0D6 /* SnapKit */,
+				CECA06FC239BA45D0082D0D6 /* Nuke */,
+			);
 			productName = GPMac;
 			productReference = CECA06C3239A82F90082D0D6 /* GPMac.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +241,10 @@
 				Base,
 			);
 			mainGroup = CECA06BA239A82F90082D0D6;
+			packageReferences = (
+				CECA06F2239A9A130082D0D6 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				CECA06FB239BA45D0082D0D6 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = CECA06C4239A82F90082D0D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -230,6 +263,7 @@
 			files = (
 				CECA06CB239A82FC0082D0D6 /* Assets.xcassets in Resources */,
 				CECA06CE239A82FC0082D0D6 /* Main.storyboard in Resources */,
+				CECA06F6239AA8230082D0D6 /* InjectScript.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,8 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECA06FA239BA1480082D0D6 /* GPMNowPlayingState.swift in Sources */,
 				CECA06C9239A82F90082D0D6 /* ViewController.swift in Sources */,
 				CECA06C7239A82F90082D0D6 /* AppDelegate.swift in Sources */,
+				CECA06F8239B5C350082D0D6 /* CustomWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +467,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.rinsuki.apps.mac.GPMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = GPMac/Bridge.h;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -451,6 +488,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.rinsuki.apps.mac.GPMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = GPMac/Bridge.h;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -579,6 +617,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CECA06F2239A9A130082D0D6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		CECA06FB239BA45D0082D0D6 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CECA06F3239A9A130082D0D6 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CECA06F2239A9A130082D0D6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		CECA06FC239BA45D0082D0D6 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CECA06FB239BA45D0082D0D6 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CECA06BB239A82F90082D0D6 /* Project object */;
 }
