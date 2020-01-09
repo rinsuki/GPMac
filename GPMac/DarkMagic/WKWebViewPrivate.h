@@ -12,11 +12,6 @@
 #define WKWebViewPrivate_h
 
 @interface WKWebView (WKPrivate)
-@property (nonatomic, readwrite, setter=_setWantsMediaPlaybackControlsView:) BOOL _wantsMediaPlaybackControlsView;
-
-
-- (void)_requestActiveNowPlayingSessionInfo:(void(^)(BOOL, BOOL, NSString*, double, double, NSInteger))callback;
-
 @end
 
 #endif /* WKWebViewPrivate_h */

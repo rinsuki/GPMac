@@ -63,7 +63,6 @@ class ViewController: NSViewController {
         ]
         nowPlayingInfoCenter.playbackState = .playing
         webView.touchBar = nil
-        webView._wantsMediaPlaybackControlsView = false
     }
 
     override var representedObject: Any? {
